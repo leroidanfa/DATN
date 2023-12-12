@@ -18,11 +18,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@SuppressWarnings("serial")
+
+
+
 @Entity
 @Table(name = "invoice")
 public class Invoice implements Serializable {
@@ -45,6 +44,9 @@ public class Invoice implements Serializable {
 	@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
 	private List<InvoiceDetail> details;
 
+	public Invoice() {
+		super();
+	}
 
 	public Invoice(Long invoiceId, String username, String phonenumber, Date invoiceDate, double amount, int status) {
 		super();

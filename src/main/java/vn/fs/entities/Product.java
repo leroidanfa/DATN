@@ -21,6 +21,9 @@ import lombok.NoArgsConstructor;
 
 
 @SuppressWarnings("serial")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "products")
 public class Product implements Serializable {
