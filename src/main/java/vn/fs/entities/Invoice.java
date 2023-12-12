@@ -48,9 +48,6 @@ public class Invoice implements Serializable {
 	@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
 	private List<InvoiceDetail> details;
 
-	public Invoice() {
-		super();
-	}
 
 	public Invoice(Long invoiceId, String username, String phonenumber, Date invoiceDate, double amount, int status) {
 		super();

@@ -43,9 +43,7 @@ public class InvoiceDetail implements Serializable{
 	
 
 
-	public InvoiceDetail() {
-		super();
-	}
+	
 
 	public InvoiceDetail(Long invoiceDetailId, int quantity, double price, Invoice invoice, Product products) {
 		super();

@@ -31,9 +31,7 @@ public class Hang implements Serializable{
 	private String tenhang;
 
 	
-	public Hang() {
-		super();
-	}
+	
 
 	public Hang(Long idhang, String tenhang) {
 		super();
