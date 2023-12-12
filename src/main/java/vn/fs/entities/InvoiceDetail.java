@@ -17,9 +17,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @SuppressWarnings("serial")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "invoice_detail")
 public class InvoiceDetail implements Serializable{
@@ -40,13 +37,7 @@ public class InvoiceDetail implements Serializable{
 	@JoinColumn(name = "product_id")
 	private Product products;
 
-	  public InvoiceDetail() {
-    }
-
-
-	public InvoiceDetail() {
-		super();
-	}
+	
 
 	public InvoiceDetail(Long invoiceDetailId, int quantity, double price, Invoice invoice, Product products) {
 		super();
