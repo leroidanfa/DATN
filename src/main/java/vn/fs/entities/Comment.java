@@ -23,9 +23,7 @@ import lombok.NoArgsConstructor;
  *
  */
 @SuppressWarnings("serial")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
 @Table(name = "comments")
 public class Comment implements Serializable {
