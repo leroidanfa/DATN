@@ -44,10 +44,10 @@ public class Invoice implements Serializable {
 	
 	@OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
 	private List<InvoiceDetail> details;
-
-
+	public Invoice(){
+		
+	}
 	public Invoice(Long invoiceId, String username, String phonenumber, Date invoiceDate, double amount, int status) {
-		super();
 		this.invoiceId = invoiceId;
 		this.username = username;
 		this.phonenumber = phonenumber;
