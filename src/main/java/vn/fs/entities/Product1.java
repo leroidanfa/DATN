@@ -13,6 +13,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @SuppressWarnings("serial")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "product1")
 public class Product1 implements Serializable{

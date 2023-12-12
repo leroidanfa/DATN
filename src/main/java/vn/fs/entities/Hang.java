@@ -16,6 +16,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @SuppressWarnings("serial")
+@Data
+@Setter @Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "hang")
 public class Hang implements Serializable{
@@ -27,7 +31,9 @@ public class Hang implements Serializable{
 	private String tenhang;
 
 	
-	
+	public Hang() {
+		super();
+	}
 
 	public Hang(Long idhang, String tenhang) {
 		super();

@@ -19,7 +19,9 @@ import lombok.NoArgsConstructor;
  *
  */
 @SuppressWarnings("serial")
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "favorites")
 public class Favorite implements Serializable {

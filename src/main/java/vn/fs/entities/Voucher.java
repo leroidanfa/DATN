@@ -18,6 +18,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @SuppressWarnings("serial")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "voucher")
 public class Voucher implements Serializable{
