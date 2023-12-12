@@ -37,7 +37,8 @@ public class InvoiceDetail implements Serializable{
 	@JoinColumn(name = "product_id")
 	private Product products;
 
-	
+	  public InvoiceDetail() {
+    }
 
 	public InvoiceDetail(Long invoiceDetailId, int quantity, double price, Invoice invoice, Product products) {
 		super();
