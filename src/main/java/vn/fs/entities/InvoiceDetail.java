@@ -40,7 +40,8 @@ public class InvoiceDetail implements Serializable{
 	@JoinColumn(name = "product_id")
 	private Product products;
 
-	
+	  public InvoiceDetail() {
+    }
 
 
 	public InvoiceDetail() {
