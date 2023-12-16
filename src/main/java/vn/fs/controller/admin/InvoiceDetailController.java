@@ -92,7 +92,7 @@ public class InvoiceDetailController {
 	                .sum();
 			existingInvoice.setAmount(totalPrice);
 			invoiceRepository.save(existingInvoice);
-			attributes.addFlashAttribute("successadd", "Đã cập nhật lại giá thành công");
+			attributes.addFlashAttribute("successadd", "Đã cập nhật lại giá của hóa đơn " + idInvoice+  " thành công");
 
 		} catch (Exception e) {
 			attributes.addFlashAttribute("errorsadd", "Cập nhật thất bại");

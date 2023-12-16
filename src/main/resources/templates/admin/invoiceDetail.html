@@ -66,6 +66,20 @@
                     </div>
                     <div class="col-md-12">
                         <div class="card">
+                            <div class="col-md-12">
+								<div th:if="${erroradd}" class="text-center alert alert-danger"
+									style="border-left: 24px solid red;">
+									<p th:text="${erroradd}"></p>
+								</div>
+								<div th:if="${errors}" class="text-center alert alert-danger"
+									style="border-left: 24px solid red;">
+									<p th:text="${errors}"></p>
+								</div>
+								<div th:if="${successadd}" class="text-center alert alert-success"
+									style="border-left: 24px solid #31ce36;">
+									<p th:text="${successadd}"></p>
+								</div>
+							</div>
                             <div class="card-header">
                                 <div class="d-flex align-items-center">
                                     <button th:if="${status==0}" class="btn btn-primary btn-round ml-auto"
@@ -323,13 +337,13 @@
                                                     Cập nhật</button>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <td colspan="2">QR đơn hàng</td>
                                             <td>
                                                 <div th:attr="data-qr-url=@{'/admin/invoices/detail/' + ${invoiceId}}">
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                         <script>
                                             function showConfigDeliveredModalDialog(
                                                 id) {
@@ -486,7 +500,7 @@
                 $.get('/admin/getProductCBO/' + selectedProductId, function (data) {
                     if (data != null) {
                         $("#priceInput").val(data.price);
-                        $("#colorInput").val(data.description);
+                        $("#colorInput").val(data.size.nameSize);
                         $("#quantityInput").val(1);
 
                         var imageName = data.productImage;
